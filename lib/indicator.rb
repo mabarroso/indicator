@@ -1,0 +1,2 @@
+module Indicator
+end
