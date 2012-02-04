@@ -14,7 +14,8 @@ module CharTree
 
     def init
       @current = 0
-      @spin = false
+      @spin = ''
+	    printf @spin
     end
 
 	  def inc
@@ -22,14 +23,18 @@ module CharTree
 	  end
 
 	  def spinning
-	    build
-	    printf @spin
+      spin
 	    sleep @delay if @delay
-	    clear
 	  end
 
-    def clear
-      printf "\b" * @spin.length
+	  def spin
+	    clean
+	    build
+	    printf @spin
+	  end
+
+    def clean
+      printf "\b" * @spin.length if @spin.length > 0
     end
 
     private

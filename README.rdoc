@@ -20,7 +20,7 @@ Using Gemfile.
   bundle install
 
 =Usage
-Simply and fast
+Animated
 
   Indicator::spin do
     10.times do
@@ -28,4 +28,12 @@ Simply and fast
     end
   end
 
+On demand update
+
+  Indicator::spin(:ondemand => true) do |spinner|
+    10.times do
+      spinner.spinning
+      sleep 0.2
+    end
+  end
 

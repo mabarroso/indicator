@@ -7,21 +7,24 @@ module Indicator
 
     end
 
-    def spin spin = CharTree::Spin.new, opts={}, &blk
+    def spin opts={}, &blk
+      spinner   = opts[:spinner] || CharTree::Spin.new
+      noclean     = opts[:noclean] || false
       ondemand	= opts[:ondemand] || false
-      noclear   = opts[:noclear] || false
 
       if ondemand
-
+        yield spinner
       else
         t = Thread.new { yield }
 
         while t.alive?
-          spin.spinning
+          spinner.spinning
         end
 
         t.join
       end
+
+      spinner.clean unless noclean
     end
 
   end
