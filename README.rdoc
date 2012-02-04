@@ -4,20 +4,18 @@ Display activity with ASCII spinners and progress indicators.
 = Description
 Sometimes you need to display activity on the text console to inform the user that the
 program is actually doing something. Be funny with a lot predefined sets or make you own
-widget to display a animation text during a long-running process in your console app.
+widget to display an animation text during a long-running process in your console app.
 
 
 =Installation
-  * From the command line.
-    * Type gem install indicator
-  * Using Gemfile.
-    (1) Add to your application Gemfile
+From the command line.
+  gem install indicator
 
-      gem 'indicator'
-
-    (2) Type
-
-      bundle install
+Using Gemfile.
+1 Add to your application Gemfile
+  gem 'indicator'
+2 Type
+  bundle install
 
 =Usage
 Simply and fast
