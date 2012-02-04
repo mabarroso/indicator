@@ -12,8 +12,10 @@ From the command line.
   gem install indicator
 
 Using Gemfile.
+
 1 Add to your application Gemfile
   gem 'indicator'
+
 2 Type
   bundle install
 
