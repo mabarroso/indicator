@@ -1,4 +1,3 @@
-=begin
 = Indicator
 Display activity with ASCII spinners and progress indicators.
 
@@ -10,25 +9,23 @@ widget to display a animation text during a long-running process in your console
 
 =Installation
   * From the command line.
-    * Type (({gem install indicator})
+    * Type gem install indicator
   * Using Gemfile.
     (1) Add to your application Gemfile
 
-      (({gem 'indicator'}))
+      gem 'indicator'
 
     (2) Type
 
-      (({bundle install}))
+      bundle install
 
 =Usage
 Simply and fast
 
-(({
   Indicator::spin do
     10.times do
       sleep 0.5
     end
   end
-}))
 
-=end
+
