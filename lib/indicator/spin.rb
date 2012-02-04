@@ -1,5 +1,5 @@
 # encoding: utf-8
-module CharTree
+module Indicator
   class Spin
     attr_accessor :pre, :post, :delay
 

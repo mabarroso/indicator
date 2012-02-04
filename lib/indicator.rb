@@ -4,18 +4,18 @@ module Indicator
   class << self
 
     def spinner
-
+      Indicator::Spin.new
     end
 
     def spin opts={}, &blk
-      spinner   = opts[:spinner] || CharTree::Spin.new
+      spinner   = opts[:spinner] || self.spinner
       noclean     = opts[:noclean] || false
       ondemand	= opts[:ondemand] || false
 
       if ondemand
         yield spinner
       else
-        t = Thread.new { yield }
+        t = Thread.new { yield spinner }
 
         while t.alive?
           spinner.spinning

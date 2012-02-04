@@ -37,3 +37,11 @@ On demand update
     end
   end
 
+Manual control
+
+  spinner = Indicator.spinner
+  10.times do
+    spinner.spinning
+    sleep 0.2
+  end
+  spinner.clean
