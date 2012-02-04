@@ -1,3 +1,34 @@
+=begin
 = Indicator
+Display activity with ASCII spinners and progress indicators.
 
-This project rocks and uses MIT-LICENSE.
+= Description
+Sometimes you need to display activity on the text console to inform the user that the
+program is actually doing something. Be funny with a lot predefined sets or make you own
+widget to display a animation text during a long-running process in your console app.
+
+
+=Installation
+  * From the command line.
+    * Type (({gem install indicator})
+  * Using Gemfile.
+    (1) Add to your application Gemfile
+
+      (({gem 'indicator'}))
+
+    (2) Type
+
+      (({bundle install}))
+
+=Usage
+Simply and fast
+
+(({
+  Indicator::spin do
+    10.times do
+      sleep 0.5
+    end
+  end
+}))
+
+=end

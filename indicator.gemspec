@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Indicator::VERSION
   s.authors     = ["Miguel Adolfo Barroso"]
   s.email       = ["mabarroso@mabarroso.com"]
-  s.homepage    = "http://www.mabarroso.com/indicator"
+  s.homepage    = "http://github.com/mabarroso/indicator"
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Display activity with ASCII spinners and progress indicators."
   s.description = "Sometimes you need to display activity on the text console to inform the user that the program is actually doing something. Be funny with a lot predefined sets or make you own widget to display a animation text during a long-running process in your console app."
