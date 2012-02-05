@@ -30,7 +30,7 @@ module Indicator
 	  def spin
 	    clean
 	    build
-	    printf @spin
+	    print @spin
 	  end
 
     def clean
@@ -42,7 +42,7 @@ module Indicator
       @spin = @pre
       @spin += @frames[0]
       @frames.push @frames.shift
-      @spin += sprintf(" %3.2f%%", @count * 100.0 / @current) if @count
+      @spin += sprintf(" %3.2f%", @current * 100.0 / @count) if @count
       @spin += @post
     end
 

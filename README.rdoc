@@ -63,3 +63,32 @@ UNICODE extra sets: :arrows :box :braile
       sleep 0.5
     end
   end
+
+=Advanced usage
+===Using count
+Use int method to increment percent
+
+  Indicator::spin :count => 10 do |spin|
+    10.times do
+      spin.inc
+      sleep 0.2
+    end
+  end
+
+===Using count, pre-text and post-text
+  Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10, :post => ' in progress' do |spin|
+    10.times do
+      spin.inc
+      sleep 0.2
+    end
+  end
+
+===Change post-text
+  Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10 do |spin|
+    10.times do |i|
+      spin.inc
+      spin.post= " in progress #{i} of 10"
+      sleep 0.2
+    end
+  end
+
