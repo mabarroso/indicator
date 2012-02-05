@@ -8,10 +8,10 @@ widget to display an animation text during a long-running process in your consol
 
 
 =Installation
-From the command line.
+==From the command line.
   gem install indicator
 
-Using Gemfile.
+==Using Gemfile.
 
 1 Add to your application Gemfile
   gem 'indicator'
@@ -20,7 +20,7 @@ Using Gemfile.
   bundle install
 
 =Usage
-Animated
+==Animated
 
   Indicator::spin do
     10.times do
@@ -28,7 +28,7 @@ Animated
     end
   end
 
-On demand update
+==On demand update
 
   Indicator::spin(:ondemand => true) do |spinner|
     10.times do
@@ -37,7 +37,7 @@ On demand update
     end
   end
 
-Manual control
+==Manual control
 
   spinner = Indicator.spinner
   10.times do
@@ -46,7 +46,7 @@ Manual control
   end
   spinner.clean
 
-Predefined sets
+==Predefined sets
   Indicator::spin :set => :p do
     10.times do
       sleep 0.5
@@ -55,7 +55,9 @@ Predefined sets
 
 Available sets: :x :< :> :V :dots :bars :p :bqpd :-
 
-Custom set
+UNICODE extra sets: :arrows :box :braile
+
+==Custom set
   Indicator::spin :frames => %w{ * + } do
     10.times do
       sleep 0.5

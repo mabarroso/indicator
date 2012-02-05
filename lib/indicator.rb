@@ -26,6 +26,14 @@ module Indicator
         %w{ bq pd }
       when :-
         %w{ - ~ }
+
+      when :arrows
+        %w{ ← ↖ ↑ ↗ → ↘ ↓ ↙ ← ↖ ↑ ↗ → ↘ ↓ ↙  }
+      when :box
+        %w{ ┤ ┘ ┴ └ ├ ┌ ┬ ┐ ┤ ┘ ┴ └ ├ ┌ ┬ ┐ }
+      when :braile
+        %w{ ⣾ ⣽ ⣻ ⢿ ⡿ ⣟ ⣯ ⣷ ⠁ ⠂ ⠄ ⡀ ⢀ ⠠ ⠐ ⠈ }
+
       else
         %w{ | / - \\ }
       end
