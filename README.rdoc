@@ -45,3 +45,19 @@ Manual control
     sleep 0.2
   end
   spinner.clean
+
+Predefined sets
+  Indicator::spin :set => :p do
+    10.times do
+      sleep 0.5
+    end
+  end
+
+Available sets: :x :< :> :V :dots :bars :p :bqpd :-
+
+Custom set
+  Indicator::spin :frames => %w{ * + } do
+    10.times do
+      sleep 0.5
+    end
+  end
