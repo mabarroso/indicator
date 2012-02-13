@@ -85,6 +85,8 @@ Default increment is 1.
     end
   end
 
+:pre_percent and :post_percent is also available.
+
 ===Change post-text
   Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10 do |spin|
     10.times do |i|

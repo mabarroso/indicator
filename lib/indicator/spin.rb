@@ -1,14 +1,16 @@
 # encoding: utf-8
 module Indicator
   class Spin
-    attr_accessor :pre, :post, :delay
+    attr_accessor :pre, :post, :pre_percent, :post_percent, :delay
 
 	  def initialize opts={}
-	    @frames = opts[:frames] || %w{ | / - \\ }
-	    @delay	= opts[:delay]  || 0.1
-			@pre   	= opts[:pre]    || ''
-			@post   = opts[:post]   || ''
-      @count  = opts[:count]  || nil
+	    @frames       = opts[:frames]       || %w{ | / - \\ }
+	    @delay	      = opts[:delay]        || 0.1
+			@pre   	      = opts[:pre]          || ''
+			@post         = opts[:post]         || ''
+      @count        = opts[:count]        || nil
+			@pre_percent  = opts[:pre_percent]  || ''
+			@post_percent = opts[:post_percent] || ''
       init
 	  end
 
@@ -42,7 +44,9 @@ module Indicator
       @spin = @pre
       @spin += @frames[0]
       @frames.push @frames.shift
+      @spin += @pre_percent
       @spin += sprintf(" %3.2f%", @current * 100.0 / @count) if @count
+      @spin += @post_percent
       @spin += @post
     end
 
