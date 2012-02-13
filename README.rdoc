@@ -68,12 +68,14 @@ UNICODE extra sets: :arrows :box :braile
 ===Using count
 Use int method to increment percent
 
-  Indicator::spin :count => 10 do |spin|
+  Indicator::spin :count => 20 do |spin|
     10.times do
-      spin.inc
+      spin.inc 2
       sleep 0.2
     end
   end
+
+Default increment is 1.
 
 ===Using count, pre-text and post-text
   Indicator::spin :pre => "Work", :frames => ['   ', '.  ', '.. ', '...'], :count => 10, :post => ' in progress' do |spin|

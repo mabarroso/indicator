@@ -18,8 +18,8 @@ module Indicator
 	    printf @spin
     end
 
-	  def inc
-	    @current += 1
+	  def inc increment = 1
+	    @current += increment
 	  end
 
 	  def spinning
