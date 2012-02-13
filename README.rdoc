@@ -83,6 +83,7 @@ Default increment is 1.
       spin.inc
       sleep 0.2
     end
+    spin.clear
   end
 
 :pre_percent and :post_percent is also available.

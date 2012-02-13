@@ -30,13 +30,20 @@ module Indicator
 	  end
 
 	  def spin
-	    clean
+	    back
 	    build
 	    print @spin
 	  end
 
-    def clean
+    def back
       printf "\b" * @spin.length if @spin.length > 0
+    end
+
+    def clean
+      return unless @spin.length > 0
+      back
+      printf " " * @spin.length
+      back
     end
 
     private
