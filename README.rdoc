@@ -97,3 +97,5 @@ Default increment is 1.
     end
   end
 
+= License
+Released under the MIT license: http://www.opensource.org/licenses/MIT
