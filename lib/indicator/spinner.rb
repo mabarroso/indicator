@@ -28,6 +28,8 @@ module Indicator
         %w{ - ~ }
       when :o
         %w{ . o O o }
+      when :O
+        %w{ ( | ) O }
       when :arrows
         %w{ ← ↖ ↑ ↗ → ↘ ↓ ↙ ← ↖ ↑ ↗ → ↘ ↓ ↙  }
       when :box

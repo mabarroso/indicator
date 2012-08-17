@@ -53,7 +53,7 @@ widget to display an animation text during a long-running process in your consol
     end
   end
 
-Available sets: :x :< :> :V :dots :bars :p :bqpd :- :o
+Available sets: :x :< :> :V :dots :bars :p :bqpd :- :o :O
 
 UNICODE extra sets: :arrows :box :braile
 
